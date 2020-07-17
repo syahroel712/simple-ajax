@@ -1,0 +1,12 @@
+RewriteEngine on
+ErrorDocument 403 /simple-ajax/error/page_403.php
+ErrorDocument 404 /simple-ajax/error/page_404.php
+ErrorDocument 500 /simple-ajax/error/page_500.php
+
+RewriteRule ^login\.html$ auth/login.php [L]
+RewriteRule ^daftar\.html$ auth/register.php [L]
+RewriteRule ^aksiLogin\.html$ auth/authentication.php [L]
+RewriteRule ^keluar\.html$ auth/logout.php [L]
+
+RewriteRule ^home\.html$ index.php [L]
+RewriteRule ^siswa\.html$ index.php?page=module/siswa/index [L]
